@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercice_15</title>
+</head>
+<body>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+
+<button>Pile ou face ?</button>
+<div>Cliquez sur le bouton</div>
+
+<script>
+
+
+    //jquery
+
+    $("button").on("click", function () {
+       $("div").html(pileOuFace());
+    });
+
+    pileOuFace = () => {
+        let x = Math.floor(Math.random() * 2);
+        return (x >= 1) ? "face" : "pile";
+    }
+
+
+    /*
+    const button = document.querySelector("button");
+    const div = document.querySelector("div");
+
+    button.addEventListener('click', ()=>{div.innerHTML = pileOuFace();
+    });
+*/
+</script>
+</body>
+</html>
