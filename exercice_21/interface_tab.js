@@ -1,14 +1,11 @@
 var readline = require("readline-sync")
-var interface = require("./interface_tab")
 var menu = require("./menu")
 
-
-/*
-class InterfaceTab {
+var interface =  class InterfaceTab {
     constructor() {
         this.tab = [];
         this.init();
-        this.menu = new Menu();
+        this.menu = new menu();
     }
 
     init() {
@@ -36,7 +33,7 @@ class InterfaceTab {
     add_number() {
         let number = parseInt(readline.question("quel chiffre voulez_vous ajouter ?"));
         this.tab.push(number);
-        this.tab.sort(compare);
+        this.tab.sort(InterfaceTab.compare);
         this.show_tab();
         this.run_app();
     }
@@ -50,15 +47,9 @@ class InterfaceTab {
         return x - y;
     }
 
-};
-
-*/
+}
 
 
 
-
-
-    
-i = new interface();
-i.run_app();
+module.exports = interface;
 
